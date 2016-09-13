@@ -1,7 +1,9 @@
-# Google Translate API Wrapper
-This blocks allows you to translates a sting of text from one language to another
+# Google Translate Package
+This package allows you to translates a sting of text from one language to another.
 
-## /translate
+<!--Need to add explanation on how to get API key from Google WITH SCREENSHOTS-->
+
+## GoogleTranslate.translate
 Translate `string` from `sourceLanguage` to `targetLanguage`
 
 * `apiKey` (string): The api key obtained from Google Cloud.
@@ -30,7 +32,7 @@ Translate `string` from `sourceLanguage` to `targetLanguage`
 }
 ```
 
-## /translateAutomatic
+## GoogleTranslate.translateAutomatic
 Translate `string` from `sourceLanguage` to target language automatically
 
 * `apiKey` (string): The api key obtained from Google Cloud.
@@ -57,7 +59,7 @@ Translate `string` from `sourceLanguage` to target language automatically
 }
 ```
 
-## /detectLanguage
+## GoogleTranslate.detectLanguage
 Detect language of `string`
 
 * `apiKey` (string): The api key obtained from Google Cloud.

@@ -25,5 +25,4 @@ app.post(`/api/${PACKAGE_NAME}/translate`, require('./api/translate.js').transla
 /** START LISTENING **/
 app.listen(PORT);
 
-
-console.log('UP');
+module.exports = app;

@@ -15,17 +15,17 @@ module.exports.do = function(req, res){
                     info: "The api key obtained from Tweeter.",
                 },
                 {
-                    name: "translateString",
+                    name: "string",
                     type: "String",
                     info: "The string to translate.",
                 },
                 {
-                    name: "translateFrom",
+                    name: "sourceLanguage",
                     type: "String",
                     info: "The ISO 639-1 language code the source input is written in."
                 },
                 {
-                    name: "translateTo",
+                    name: "targetLanguage",
                     type: "String",
                     info: "The ISO 639-1 language code to translate the input to."
                 }

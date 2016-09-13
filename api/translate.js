@@ -4,7 +4,7 @@ const GTranslate = require('@google-cloud/translate');
 module.exports.translate = (req, res) => {
 
     /* Get user parameters and prepare it */
-    let { apiKey, translateString, translateFrom, translateTo, to } = req.body.args;
+    let { apiKey, string, sourceLanguage, targetLanguage, to } = req.body.args;
 
     /* Prepare RapidAPI Object for response */
     var r = {
@@ -12,11 +12,8 @@ module.exports.translate = (req, res) => {
         contextWrites   : {}
     };
 
-    if(!apiKey) {
-        r.contextWrites[to] = 'Error: An API key is required to use the Translate API.';
-        r.callback = 'error';
-
-        res.status(200).send(r);
+    if(!apiKey || !targetLanguage) {
+        echoBadEnd(r, res);
         return;
     }
 
@@ -27,10 +24,10 @@ module.exports.translate = (req, res) => {
 
     /* Send raw to Google Translate */
     gt.translate(
-        translateString,
+        string,
         {
-            from: translateFrom,
-            to:   translateTo
+            from: sourceLanguage,
+            to:   targetLanguage
         }, 
 
         (err, translation) => {
@@ -48,3 +45,10 @@ module.exports.translate = (req, res) => {
         }
     );
 };
+
+function echoBadEnd(r, res) {
+    r.contextWrites[to] = 'Error: Fill in required fields to use the Translate API.';
+    r.callback = 'error';
+
+    res.status(200).send(r);
+}

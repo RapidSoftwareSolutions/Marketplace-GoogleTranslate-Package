@@ -51,6 +51,22 @@ module.exports.do = function(req, res){
                     info: "The ISO 639-1 language code to translate the input to."
                 }
             ],
+        },
+
+        {
+            "name":"detectLanguage",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from Tweeter.",
+                },
+                {
+                    name: "string",
+                    type: "String",
+                    info: "The string to detect.",
+                },
+            ],
         }]
     })
 };

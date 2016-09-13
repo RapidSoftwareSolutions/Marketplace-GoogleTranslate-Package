@@ -9,7 +9,6 @@ let apiKey = 'AIzaSyCDogEcpeA84USVXMS471PDt3zsG-caYDM',
     to = 'to';
 
 describe('/translate function', () => {
-
     it('should translate a sting of text from one language to another', () => {
         return request(app)
         .post('/api/'+ global.PACKAGE_NAME +'/translate')
@@ -20,11 +19,9 @@ describe('/translate function', () => {
             assert.equal(data.body.callback, 'success');
         });
     });
-
 });
 
 describe('/translateAutomatic function', () => {
-
     it('should translate a sting of text to target language automatic', () => {
         return request(app)
         .post('/api/'+ global.PACKAGE_NAME +'/translateAutomatic')
@@ -34,6 +31,18 @@ describe('/translateAutomatic function', () => {
             assert.equal(data.body.contextWrites[to], 'Hola');
             assert.equal(data.body.callback, 'success');
         });
-    });
-    
+    }); 
+});
+
+describe('/detectLanguage function', () => {
+    it('should detect language of sting of text', () => {
+        return request(app)
+        .post('/api/'+ global.PACKAGE_NAME +'/detectLanguage')
+        .send({args: { apiKey, string, targetLanguage, to }})
+        .expect(200)
+        .then((data) => {
+            assert.equal(data.body.contextWrites[to], 'en');
+            assert.equal(data.body.callback, 'success');
+        });
+    }); 
 });

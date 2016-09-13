@@ -22,6 +22,7 @@ app.get(`/api/${PACKAGE_NAME}`, require('./api/metadata.js').do);
 
 app.post(`/api/${PACKAGE_NAME}/translate`, require('./api/translate.js').translate);
 app.post(`/api/${PACKAGE_NAME}/translateAutomatic`, require('./api/translate.js').translate);
+app.post(`/api/${PACKAGE_NAME}/detectLanguage`, require('./api/translate.js').detect);
 
 /** START LISTENING **/
 app.listen(PORT);

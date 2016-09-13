@@ -3,21 +3,37 @@ let request = require('supertest-as-promised');
 
 let app = require('../index');
 let apiKey = 'AIzaSyCDogEcpeA84USVXMS471PDt3zsG-caYDM', 
-  string = 'Hello', 
-  sourceLanguage = 'en', 
-  targetLanguage = 'es', 
-  to = 'to';
+    string = 'Hello', 
+    sourceLanguage = 'en', 
+    targetLanguage = 'es', 
+    to = 'to';
 
 describe('/translate function', () => {
 
-  it('should translate a sting of text from one language to another', () => {
+    it('should translate a sting of text from one language to another', () => {
+        return request(app)
+        .post('/api/'+ global.PACKAGE_NAME +'/translate')
+        .send({args: { apiKey, string, sourceLanguage, targetLanguage, to }})
+        .expect(200)
+        .then((data) => {
+            assert.equal(data.body.contextWrites[to], 'Hola');
+            assert.equal(data.body.callback, 'success');
+        });
+    });
 
-    return request(app)
-      .post('/api/marketplace-googletranslate-package/translate')
-      .send({args: { apiKey, string, sourceLanguage, targetLanguage, to }})
-      .expect(200)
-      .then((data) => {
-        assert.equal(data.body.contextWrites[to], 'Hola');
-      });
-  });
+});
+
+describe('/translateAutomatic function', () => {
+
+    it('should translate a sting of text to target language automatic', () => {
+        return request(app)
+        .post('/api/'+ global.PACKAGE_NAME +'/translateAutomatic')
+        .send({args: { apiKey, string, targetLanguage, to }})
+        .expect(200)
+        .then((data) => {
+            assert.equal(data.body.contextWrites[to], 'Hola');
+            assert.equal(data.body.callback, 'success');
+        });
+    });
+    
 });

@@ -20,9 +20,9 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended:true}));
 //A metadata
 app.get(`/api/${PACKAGE_NAME}`, require('./api/metadata.js').do);
 
-app.post(`/api/${PACKAGE_NAME}/translate`, require('./api/translate.js').translate);
-app.post(`/api/${PACKAGE_NAME}/translateAutomatic`, require('./api/translate.js').translate);
-app.post(`/api/${PACKAGE_NAME}/detectLanguage`, require('./api/translate.js').detect);
+app.post(`/api/${PACKAGE_NAME}/translate`, require('./api/translate.js'));
+app.post(`/api/${PACKAGE_NAME}/translateAutomatic`, require('./api/translate.js'));
+app.post(`/api/${PACKAGE_NAME}/detectLanguage`, require('./api/detect.js'));
 
 /** START LISTENING **/
 app.listen(PORT);

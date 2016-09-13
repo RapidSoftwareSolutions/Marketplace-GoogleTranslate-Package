@@ -1,7 +1,7 @@
-/* Import Google Tranlsate SDK */
+const _ = require('../lib/functions');
 const GTranslate = require('@google-cloud/translate');
 
-module.exports.translate = (req, res) => {
+module.exports = (req, res) => {
 
     /* Get user parameters and prepare it */
     let { apiKey, string, sourceLanguage, targetLanguage, to } = req.body.args;
@@ -13,7 +13,7 @@ module.exports.translate = (req, res) => {
     };
 
     if(!apiKey || !targetLanguage) {
-        echoBadEnd(r, res);
+        _.echoBadEnd(r, res);
         return;
     }
 
@@ -45,46 +45,3 @@ module.exports.translate = (req, res) => {
         }
     );
 };
-
-module.exports.detect = (req, res) => {
-
-    /* Get user parameters and prepare it */
-    let { apiKey, string, to } = req.body.args;
-
-    /* Prepare RapidAPI Object for response */
-    var r = {
-        callback        : "",
-        contextWrites   : {}
-    };
-
-    if(!apiKey || !string) {
-        echoBadEnd(r, res);
-        return;
-    }
-
-    /* Google Cloud SDK Initialization */
-    let gt = GTranslate({
-        key: apiKey
-    });
-
-    /* Send raw to Google Translate */
-    gt.detect(string, function(err, results) {
-        if(err) {
-            r.contextWrites[to] = JSON.stringify(err);
-            r.callback = 'error';
-        }
-        else {
-            r.contextWrites[to] = results['language'];
-            r.callback = 'success';
-        }
-
-        res.status(200).send(r);
-    });
-};
-
-function echoBadEnd(r, res) {
-    r.contextWrites[to] = 'Error: Fill in required fields to use the Translate API.';
-    r.callback = 'error';
-
-    res.status(200).send(r);
-}

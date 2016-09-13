@@ -35,7 +35,7 @@ describe('/translateAutomatic function', () => {
 });
 
 describe('/detectLanguage function', () => {
-    it('should detect language of sting of text', () => {
+    it('should detect language of sting', () => {
         return request(app)
         .post('/api/'+ global.PACKAGE_NAME +'/detectLanguage')
         .send({args: { apiKey, string, targetLanguage, to }})

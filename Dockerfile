@@ -4,4 +4,4 @@ EXPOSE ${PORT}
 COPY . .
 RUN npm install
 RUN npm run test
-Run npm start
+CMD node index.js

@@ -1,5 +1,5 @@
 # Google Translate Package
-This package allows you to translates a sting of text from one language to another.
+This package allows you to translates a string of text from one language to another.
 
 <!--Need to add explanation on how to get API key from Google WITH SCREENSHOTS-->
 

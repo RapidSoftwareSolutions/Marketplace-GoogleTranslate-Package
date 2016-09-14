@@ -6,12 +6,18 @@ module.exports.do = function(req, res){
         "description": "This blocks allows you to translates a sting of text from one language to another",
         'image': 'https://upload.wikimedia.org/wikipedia/commons/d/db/Google_Translate_Icon.png',
         'repo': 'https://github.com/RapidSoftwareSolutions/marketplace-googletranslate-package',
+        'accounts': {
+            'domain': 'google.com',
+            'credentials': [
+                'apiKey',
+            ]
+        },
         'blocks': [{
             "name":"translate",
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from Google Cloud.",
                 },
                 {

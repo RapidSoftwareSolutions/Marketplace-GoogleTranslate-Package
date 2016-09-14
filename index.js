@@ -8,7 +8,7 @@ const express       = require('express'),
 //If ran in production - use enviroment PORT. In development, default to 8080
 const PORT = process.env.PORT || 8080;
 //The package name
-global.PACKAGE_NAME = "marketplace-googletranslate-package";
+global.PACKAGE_NAME = "GoogleTra";
 
 //Initialize web server
 const app = express();

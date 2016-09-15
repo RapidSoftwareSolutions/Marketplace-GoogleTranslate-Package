@@ -44,7 +44,7 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "String",
-                    info: "The api key obtained from Tweeter.",
+                    info: "The api key obtained from Google Cloud.",
                 },
                 {
                     name: "string",
@@ -65,7 +65,7 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "String",
-                    info: "The api key obtained from Tweeter.",
+                    info: "The api key obtained from Google Cloud.",
                 },
                 {
                     name: "string",

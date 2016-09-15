@@ -4,7 +4,7 @@ const GTranslate = require('@google-cloud/translate');
 module.exports = (req, res) => {
 
     /* Get user parameters and prepare it */
-    let { apiKey, string, to } = req.body.args;
+    let { apiKey, string, to="to" } = req.body.args;
 
     /* Prepare RapidAPI Object for response */
     var r = {

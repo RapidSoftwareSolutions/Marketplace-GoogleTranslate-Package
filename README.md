@@ -3,7 +3,7 @@ This package allows you to translates a string of text from one language to anot
 
 <!--Need to add explanation on how to get API key from Google WITH SCREENSHOTS-->
 
-## How to gey `apiKey`:
+## How to get `apiKey`:
  0. [Go to the projects page](https://support.google.com/cloud/answer/6293499#enable-billing)
  1. Select or create a Cloud Platform Console project.
  2. [Enable billing](https://support.google.com/cloud/answer/6293499#enable-billing) for your project.

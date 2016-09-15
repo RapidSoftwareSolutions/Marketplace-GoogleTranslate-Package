@@ -1,5 +1,4 @@
 [create]:https://github.com/RapidSoftwareSolutions/Marketplace-GoogleTranslate-Package/blob/master/instructions/create.png?raw=true
-[enable]:https://github.com/RapidSoftwareSolutions/Marketplace-GoogleTranslate-Package/blob/master/instructions/enable.png?raw=true
 
 # Google Translate Package
 This package allows you to translates a string of text from one language to another.
@@ -13,7 +12,7 @@ This package allows you to translates a string of text from one language to anot
  2. [Enable billing](https://support.google.com/cloud/answer/6293499#enable-billing) for your project.
  3. Click ***Continue*** to enable the Translate API and any related services.
  4. On the ***Credentials*** page, get an ***API key*** (select Browser key when prompted). _Note: If you have an existing API key, you can use that key._
- 5. Go to  [translate api overview](https://console.cloud.google.com/apis/api/translate/overview) and press ![Enable API][enable] button.
+ 5.<div><span style="">Go to  [translate api overview](https://console.cloud.google.com/apis/api/translate/overview) and press.</span><img style="vertical-align:middle" src="https://github.com/RapidSoftwareSolutions/Marketplace-GoogleTranslate-Package/blob/master/instructions/enable.png?raw=true">.</div>
 
 ## GoogleTranslate.translate
 Translate `string` from `sourceLanguage` to `targetLanguage`

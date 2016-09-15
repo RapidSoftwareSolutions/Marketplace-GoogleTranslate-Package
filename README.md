@@ -14,6 +14,7 @@ This package allows you to translates a string of text from one language to anot
  3. Click ***Continue*** to enable the Translate API and any related services.
  4. On the ***Credentials*** page, get an ***API key*** (select Browser key when prompted). _Note: If you have an existing API key, you can use that key._
  5. Go to  [translate api overview](https://console.cloud.google.com/apis/api/translate/overview) and press `Enable` button.
+ 
  ![Enable API][enable] 
 
 ## GoogleTranslate.translate

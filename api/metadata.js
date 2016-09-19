@@ -36,6 +36,16 @@ module.exports.do = function(req, res){
                     info: "The ISO 639-1 language code to translate the input to."
                 }
             ],
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
 
         {
@@ -57,6 +67,16 @@ module.exports.do = function(req, res){
                     info: "The ISO 639-1 language code to translate the input to."
                 }
             ],
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
 
         {
@@ -73,6 +93,16 @@ module.exports.do = function(req, res){
                     info: "The string to detect.",
                 },
             ],
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         }]
     })
 };

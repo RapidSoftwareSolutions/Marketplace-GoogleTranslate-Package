@@ -9,7 +9,7 @@ module.exports.do = function(req, res){
         'accounts': {
             'domain': 'google.com',
             'credentials': [
-                'apiKey',
+                'apiKey'
             ]
         },
         'blocks': [{

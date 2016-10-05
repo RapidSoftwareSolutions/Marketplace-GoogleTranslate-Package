@@ -53,7 +53,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from Google Cloud.",
                 },
                 {
@@ -84,7 +84,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from Google Cloud.",
                 },
                 {

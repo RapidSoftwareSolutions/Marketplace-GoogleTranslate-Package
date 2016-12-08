@@ -2,6 +2,7 @@ module.exports.do = function(req, res){
     res.status(200).send({
         'package': 'GoogleTranslate',
         "tagline": "Google Translate API Wrapper",
+        "keywords": ["API", "English", "Google", "language", "languages", "translate", "translation", "travel"],
         "description": "This blocks allows you to translates a sting of text from one language to another",
         'image': 'https://upload.wikimedia.org/wikipedia/commons/d/db/Google_Translate_Icon.png',
         'repo': 'https://github.com/RapidSoftwareSolutions/marketplace-googletranslate-package',

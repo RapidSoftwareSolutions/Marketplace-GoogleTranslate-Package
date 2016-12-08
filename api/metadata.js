@@ -1,5 +1,4 @@
 module.exports.do = function(req, res){
-    /* When sending GET request to api/Twitter, return the metadata of the package */
     res.status(200).send({
         'package': 'GoogleTranslate',
         "tagline": "Google Translate API Wrapper",
@@ -18,23 +17,27 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "credentials",
-                    info: "The api key obtained from Google Cloud.",
+                    info: "Required: The api key obtained from Google Cloud.",
+                    required: true
                 },
                 {
                     name: "string",
                     type: "String",
-                    info: "The string to translate.",
-                },
-                {
-                    name: "sourceLanguage",
-                    type: "String",
-                    info: "The ISO 639-1 language code the source input is written in."
+                    info: "Required: The string to translate.",
+                    required: true
                 },
                 {
                     name: "targetLanguage",
                     type: "String",
-                    info: "The ISO 639-1 language code to translate the input to."
+                    info: "Required: The ISO 639-1 language code to translate the input to.",
+                    required: true
                 }
+                {
+                    name: "sourceLanguage",
+                    type: "String",
+                    info: "The ISO 639-1 language code the source input is written in.",
+                    required: false
+                },
             ],
             'callbacks':[
                 {
@@ -54,17 +57,20 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "credentials",
-                    info: "The api key obtained from Google Cloud.",
+                    info: "Required: The api key obtained from Google Cloud.",
+                    required: true
                 },
                 {
                     name: "string",
                     type: "String",
-                    info: "The string to translate.",
+                    info: "Required: The string to translate.",
+                    required: true
                 },
                 {
                     name: "targetLanguage",
                     type: "String",
-                    info: "The ISO 639-1 language code to translate the input to."
+                    info: "Required: The ISO 639-1 language code to translate the input to.",
+                    required: true
                 }
             ],
             'callbacks':[
@@ -85,12 +91,14 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "credentials",
-                    info: "The api key obtained from Google Cloud.",
+                    info: "Required: The api key obtained from Google Cloud.",
+                    required: true
                 },
                 {
                     name: "string",
                     type: "String",
-                    info: "The string to detect.",
+                    info: "Required: The string to detect.",
+                    required: true
                 },
             ],
             'callbacks':[

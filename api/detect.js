@@ -13,7 +13,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !string) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, string');
         return;
     }
 

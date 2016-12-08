@@ -12,8 +12,8 @@ module.exports = (req, res) => {
         contextWrites   : {}
     };
 
-    if(!apiKey || !targetLanguage) {
-        _.echoBadEnd(r, to, res);
+    if(!apiKey || !targetLanguage || !string) {
+        _.echoBadEnd(r, to, res, 'apiKey, targetLanguage, string');
         return;
     }
 

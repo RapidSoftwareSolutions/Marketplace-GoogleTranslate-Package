@@ -22,10 +22,10 @@ Translate `string` from `sourceLanguage` to `targetLanguage`
 
 | Field            | Type     | Description  |
 | -------------    |-------------     | -----|
-| `apiKey`         |string  | The api key obtained from Google Cloud. |
-| `string`         |string  | The string to translate. |
+| `apiKey`         |string  | Required: The api key obtained from Google Cloud. |
+| `string`         |string  | Required: The string to translate. |
+| `targetLanguage` |string  | Required: The ISO 639-1 language code to translate the input to. |
 | `sourceLanguage` |string  | The ISO 639-1 language code the source input is written in. |
-| `targetLanguage` |string  | The ISO 639-1 language code to translate the input to. |
 
 #### Request example
 ```json
@@ -53,9 +53,9 @@ Translate `string` from `sourceLanguage` to target language automatically
 
 | Field            | Type     | Description  |
 | -------------    |-------------     | -----|
-| `apiKey`         |string  | The api key obtained from Google Cloud. |
-| `string`         |string  | The string to translate. |
-| `targetLanguage` |string  | The ISO 639-1 language code to translate the input to. |
+| `apiKey`         |string  | Required: The api key obtained from Google Cloud. |
+| `string`         |string  | Required: The string to translate. |
+| `targetLanguage` |string  | Required: The ISO 639-1 language code to translate the input to. |
 
 #### Request example
 ```json
@@ -82,8 +82,8 @@ Detect language of `string`
 
 | Field            | Type     | Description  |
 | -------------    |-------------     | -----|
-| `apiKey`         |string  | The api key obtained from Google Cloud. |
-| `string`         |string  | The string to translate. |
+| `apiKey`         |string  | Required: The api key obtained from Google Cloud. |
+| `string`         |string  | Required: The string to translate. |
 
 #### Request example
 ```json

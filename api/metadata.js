@@ -17,19 +17,19 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "credentials",
-                    info: "Required: The api key obtained from Google Cloud.",
+                    info: "The api key obtained from Google Cloud.",
                     required: true
                 },
                 {
                     name: "string",
                     type: "String",
-                    info: "Required: The string to translate.",
+                    info: "The string to translate.",
                     required: true
                 },
                 {
                     name: "targetLanguage",
                     type: "String",
-                    info: "Required: The ISO 639-1 language code to translate the input to.",
+                    info: "The ISO 639-1 language code to translate the input to.",
                     required: true
                 }
                 {
@@ -57,19 +57,19 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "credentials",
-                    info: "Required: The api key obtained from Google Cloud.",
+                    info: "The api key obtained from Google Cloud.",
                     required: true
                 },
                 {
                     name: "string",
                     type: "String",
-                    info: "Required: The string to translate.",
+                    info: "The string to translate.",
                     required: true
                 },
                 {
                     name: "targetLanguage",
                     type: "String",
-                    info: "Required: The ISO 639-1 language code to translate the input to.",
+                    info: "The ISO 639-1 language code to translate the input to.",
                     required: true
                 }
             ],
@@ -91,13 +91,13 @@ module.exports.do = function(req, res){
                 {
                     name: "apiKey",
                     type: "credentials",
-                    info: "Required: The api key obtained from Google Cloud.",
+                    info: "The api key obtained from Google Cloud.",
                     required: true
                 },
                 {
                     name: "string",
                     type: "String",
-                    info: "Required: The string to detect.",
+                    info: "The string to detect.",
                     required: true
                 },
             ],

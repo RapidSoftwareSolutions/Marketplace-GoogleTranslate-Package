@@ -14,6 +14,7 @@ module.exports.do = function(req, res){
         },
         'blocks': [{
             "name":"translate",
+            "description": "Translate `string` from `sourceLanguage` to `targetLanguage`",
             "args":[
                 {
                     name: "apiKey",
@@ -32,7 +33,7 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The ISO 639-1 language code to translate the input to.",
                     required: true
-                }
+                },
                 {
                     name: "sourceLanguage",
                     type: "String",
@@ -54,6 +55,7 @@ module.exports.do = function(req, res){
 
         {
             "name":"translateAutomatic",
+            "description": "Translate `string` from `sourceLanguage` to target language automatically",
             "args":[
                 {
                     name: "apiKey",
@@ -88,6 +90,7 @@ module.exports.do = function(req, res){
 
         {
             "name":"detectLanguage",
+            "description": "Detect language of `string`",
             "args":[
                 {
                     name: "apiKey",

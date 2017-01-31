@@ -4,8 +4,6 @@
 # Google Translate Package
 This package allows you to translates a string of text from one language to another.
 
-<!--Need to add explanation on how to get API key from Google WITH SCREENSHOTS-->
-
 ## How to get `apiKey`:
  0. [Go to the projects page](https://console.cloud.google.com/iam-admin/projects)
  1. Select or create a Cloud Platform Console project.

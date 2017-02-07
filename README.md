@@ -1,6 +1,8 @@
 [create]:https://github.com/RapidSoftwareSolutions/Marketplace-GoogleTranslate-Package/blob/master/instructions/create.png?raw=true
 [enable]:https://github.com/RapidSoftwareSolutions/Marketplace-GoogleTranslate-Package/blob/master/instructions/enable.png?raw=true
 
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/GoogleTranslate/functions?utm_source=RapidAPIGitHub_GoogleTranslateFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # Google Translate Package
 This package allows you to translates a string of text from one language to another.
 

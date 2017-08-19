@@ -31,15 +31,15 @@ module.exports.do = function(req, res){
                 {
                     name: "targetLanguage",
                     type: "String",
-                    info: "The ISO 639-1 language code to translate the input to.",
+                    info: "The ISO 639-1 language code to translate the input to. All supported languages: https://cloud.google.com/translate/docs/languages",
                     required: true
                 },
                 {
                     name: "sourceLanguage",
                     type: "String",
-                    info: "The ISO 639-1 language code the source input is written in.",
+                    info: "The ISO 639-1 language code the source input is written in. All supported languages: https://cloud.google.com/translate/docs/languages",
                     required: false
-                },
+                }
             ],
             'callbacks':[
                 {
@@ -72,7 +72,7 @@ module.exports.do = function(req, res){
                 {
                     name: "targetLanguage",
                     type: "String",
-                    info: "The ISO 639-1 language code to translate the input to.",
+                    info: "The ISO 639-1 language code to translate the input to. All supported languages: https://cloud.google.com/translate/docs/languages",
                     required: true
                 }
             ],

@@ -24,8 +24,8 @@ Translate `string` from `sourceLanguage` to `targetLanguage`
 | -------------    |-------------     | -----|
 | `apiKey`         |string  | Required: The api key obtained from Google Cloud. |
 | `string`         |string  | Required: The string to translate. |
-| `targetLanguage` |string  | Required: The ISO 639-1 language code to translate the input to. |
-| `sourceLanguage` |string  | The ISO 639-1 language code the source input is written in. |
+| `targetLanguage` |string  | Required: The ISO 639-1 language code to translate the input to. [All supported languages](https://cloud.google.com/translate/docs/languages)|
+| `sourceLanguage` |string  | The ISO 639-1 language code the source input is written in. [All supported languages](https://cloud.google.com/translate/docs/languages)|
 
 #### Request example
 ```json
@@ -55,7 +55,7 @@ Translate `string` from `sourceLanguage` to target language automatically
 | -------------    |-------------     | -----|
 | `apiKey`         |string  | Required: The api key obtained from Google Cloud. |
 | `string`         |string  | Required: The string to translate. |
-| `targetLanguage` |string  | Required: The ISO 639-1 language code to translate the input to. |
+| `targetLanguage` |string  | Required: The ISO 639-1 language code to translate the input to. [All supported languages](https://cloud.google.com/translate/docs/languages) |
 
 #### Request example
 ```json

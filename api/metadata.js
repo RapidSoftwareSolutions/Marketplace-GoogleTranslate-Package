@@ -12,6 +12,14 @@ module.exports.do = function(req, res){
                 'apiKey'
             ]
         },
+        'steps': [
+            "Go to the projects page(https://console.cloud.google.com/iam-admin/projects)",
+            "Select or create a Cloud Platform Console project. Creating project",
+            "Enable billing(https://support.google.com/cloud/answer/6293499#enable-billing) for your project",
+            "Click Continue to enable the Translate API and any related services",
+            "On the Credentials page, get an API key (select Browser key when prompted). Note: If you have an existing API key, you can use that key",
+            "Go to the translate api overview(https://console.cloud.google.com/apis/api/translate/overview) and press the 'Enable' button"
+        ],
         'blocks': [{
             "name":"translate",
             "description": "Translate `string` from `sourceLanguage` to `targetLanguage`",
